@@ -43,7 +43,6 @@ public final class QueryUtils {
      * parsing a JSON response.
      */
     public static ArrayList<Earthquake> extractEarthquakes() {
-
         // Create an empty ArrayList that we can start adding earthquakes to
         ArrayList<Earthquake> earthquakes = new ArrayList<>();
 
@@ -62,7 +61,7 @@ public final class QueryUtils {
                 JSONObject properties = currentEarthquake.getJSONObject("properties");
                 String magnitude = properties.getString("mag");
                 String place = properties.getString("place");
-                String time  = properties.getString("time");
+                long time = properties.getLong("time");
                 Earthquake earthquake = new Earthquake(magnitude,place,time);
                 earthquakes.add(earthquake);
             }
