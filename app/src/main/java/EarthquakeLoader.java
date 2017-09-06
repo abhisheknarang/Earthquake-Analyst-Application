@@ -1,8 +1,9 @@
 import android.content.Context;
-import android.support.v4.content.AsyncTaskLoader;
+
 
 import com.example.android.quakereport.Earthquake;
 import com.example.android.quakereport.QueryUtils;
+import android.content.AsyncTaskLoader;
 
 import java.util.List;
 
